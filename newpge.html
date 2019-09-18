@@ -1,0 +1,37 @@
+<html>
+<head>
+
+    <title>Placing Images in HTML Documents</title>
+	
+	<script type="text/javascript">
+
+function filename1(str){
+console.log(str);
+
+window.location.href = "ThankYou.html?url="+str;
+}
+
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PXJPLFL');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXJPLFL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form action="ThankYou.html">
+  Please click on any image:<br>
+    <img id="image1" src="img/GA1.png" alt="Google Analytics Picture 1" onclick="filename1('GA1.png');">
+    <img id="image2" src="img/GA2.png" alt="Google Analytics Picture 2" onclick="filename1('GA2.png');">
+    <img id="image3" src="img/GA3.png" alt="Google Analytics Picture 3" onclick="filename1('GA3.png');">
+	<img id="image4" src="img/GA4.png" alt="Google Analytics Picture 4" onclick="filename1('GA4.png');">
+	<img id="image5" src="img/GA5.png" alt="Google Analytics Picture 5" onclick="filename1('GA5.png');">
+</form>		  
+</body>
+</html>                            
