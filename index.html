@@ -1,0 +1,127 @@
+<html> 
+<head> 
+
+<script> 
+function ValidateForm()                                    
+{ 
+    var name = document.forms["DetailsForm"]["Name"];               
+    var email = document.forms["DetailsForm"]["EMail"];    
+    var phone = document.forms["DetailsForm"]["Telephone"];
+	var dob = document.forms["DetailsForm"]["DOB"];
+    var regExName = /^[a-zA-Z]*$/
+	var regExNum = /^[1-9]{1}[0-9]{9}$/
+	//var presentdate = new Date();
+   
+
+	if (name.value==null || name.value==""){  
+  	   alert("Name can't be blank"); 
+	   name.focus(); 
+  	   return false; 
+ 	   } else if (!regExName.test(name.value)) {
+    	   alert('Name can only contain alphabets');
+	   name.focus();
+    	   return false; 
+	}
+
+  //Validation for name is that the name should not be blank and should not contain special characters 
+       if (email.value == "")                                   
+       { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+       } 
+   
+      if (email.value.indexOf("@", 0) < 0)                 
+      { 
+        window.alert("Please enter a valid e-mail address"); 
+        email.focus(); 
+        return false; 
+      } 
+   
+      if (email.value.indexOf(".", 0) < 0){ 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+      } 
+	 //Validation for email is that the name should not be blank and should be of proper pattern
+	 
+	 
+	  if (phone.value==null || phone.value==""){  
+  	   alert("Phone Number can't be blank"); 
+	   phone.focus(); 
+  	   return false; 
+ 	   } else if (!phone.value.match(regExNum)) {
+    	   alert('Phone Number can only contain 10 digits');
+	   phone.focus();
+    	   return false; 
+		}
+	//Validation for phone is that the name should not be blank and should contain only 10 digits 	
+}
+</script> 
+  
+<style> 
+Style {                                         
+    margin-left: 70px; 
+    font-weight: bold ; 
+    float: left; 
+    clear: left; 
+    width: 100px; 
+    text-align: left; 
+    margin-right: 10px; 
+    font-family:sans-serif,bold, Arial, Helvetica; 
+    font-size:14px; 
+} 
+   
+div {  
+    box-sizing: border-box; 
+    width: 100%; 
+    border: 100px solid black; 
+    float: left; 
+    align-content: center; 
+    align-items: center; 
+} 
+   
+form {                                         
+    margin: 0 auto; 
+    width: 600px; 
+}</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PXJPLFL');</script>
+<!-- End Google Tag Manager -->
+</head> 
+   
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXJPLFL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<h1 style="text-align: center"> USER DETAILS </h1>           
+<form name="DetailsForm" action="newpge.html" onsubmit="return ValidateForm()">  
+    <table>  
+
+     <tr>
+        <td><p>Name:</td><td><input type="text" size=65 name="Name"> </p> </td>
+    </tr>         
+    <tr>
+    <td><p>E-mail Address:</td><td><input type="text" size=65 name="EMail">  </p></td>
+    <tr>  
+    <td><p>Telephone:</td><td> <input type="text" size=65 name="Telephone"> </p></td>
+    </tr>  
+    <tr>    
+    <td><p>DOB:</td><td> <input type="date" name="bday"></p></td>
+    </tr>
+    <tr>
+    <td><p>Gender:</td><td><input type="radio" name="gender" value="male" checked>Male
+    <input type="radio" name="gender" value="female">Female</p></td>
+    </tr>
+    <tr>    
+    <td><p><input type="submit" value="Submit" name="Submit"></p></td>  
+    </tr>
+    </table>      
+</form> 
+</body> 
+</html> 
